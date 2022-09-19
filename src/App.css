@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
+  background: var(--Cream);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
+}
+.card{
+  background: var(--White);
+  max-width: 21rem;
+  border-radius: 1rem;
+}
+.card__image{
+  width: 100%;
+  border-start-start-radius: 1rem;
+  border-start-end-radius: 1rem;
+}
+.card__image1{
+  display: none;
+}
+.card__content{
+  padding: 0 1.2rem;
+}
+p{
+  font-family: 'Montserrat', sans-serif;
+  color: var(--Dark-grayish-blue);
+}
+.card__tag{
+  font-size: .9rem;
+  letter-spacing: .3rem;
+}
+.card__title{
+  font-family: 'Fraunces', serif;
+  font-size: 2.1rem;
+  line-height: 2rem;
+  color: var(--Very-dark-blue);
+  margin: .8rem 0 .9rem;
+}
+.card__description{
+  font-size: .9rem;
+  line-height: 1.8rem;
+}
+.card__price{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.card__price p:first-child{
+  font-family: 'Fraunces', serif;
+  color: var(--Dark-cyan);
+  font-size: 2.2rem;
+  margin: 0;
+}
+.card__price p:last-child{
+  font-size: .9rem;
+  text-decoration: line-through;
+  margin-left: .8rem;
+}
+.card__btn{
+  width: 100%;
+  background-color: var(--Dark-cyan);
+  border: none;
+  padding: 1rem 0;
+  border-radius: .5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--White);
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.card__btn > img{
+  width: 18px ;
+  margin-right: .7rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 600px ) {
+  .card{
+    display: flex;
+    max-width: 35rem;
+    background-color: var(--White);
+    border-radius: .7rem;
   }
-  to {
-    transform: rotate(360deg);
+  .card__image{
+    display: none;
+  }
+  .card__image1{
+    display: initial;
+    width: 45%;
+    border-start-start-radius: .7rem;
+    border-end-start-radius: .7rem;
+  }
+  .card__content {
+    padding: 0 1.8rem;
+  }
+  .card__tag {
+    font-size: .7rem;
+    letter-spacing: .3rem;
+    margin-top: 1.3rem;
+  }
+  .card__btn:hover{
+    background-color: #1a4031;
   }
 }
